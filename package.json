@@ -1,0 +1,41 @@
+{
+  "name": "obix-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Root npm workspace for the OBIX checkout",
+  "workspaces": [
+    "bindings/*",
+    "cli/*",
+    "components/*",
+    "configs/*",
+    "controls/*",
+    "data/*",
+    "drivers/*",
+    "feedback/*",
+    "forms/*",
+    "navigation/*",
+    "overlays/*",
+    "runtime/obix",
+    "runtime/obix-holo-core",
+    "runtime/obix-jsx-adapter",
+    "runtime/obix-jsx-components",
+    "runtime/obix-jsx-integration",
+    "runtime/obix-sdk-accessibility",
+    "runtime/obix-sdk-adapter",
+    "runtime/obix-sdk-motion",
+    "runtime/obix-sdk-state",
+    "runtime/obix-sdk-telemetry",
+    "runtime/obix-state-minimizer",
+    "runtime/obix-z-scanning-pattern"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "workspaces:list": "npm query .workspace"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
